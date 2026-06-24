@@ -1,0 +1,31 @@
+# APIData/sample-api.yaml
+# Drop any number of .yaml files in this folder.
+# The app reads them all automatically on startup and on Sync.
+
+name: JSONPlaceholder
+url: https://jsonplaceholder.typicode.com
+
+endpoints:
+  - method: GET
+    path: /posts
+    description: Returns all posts
+    schemaFile: Schemas/GET/posts.json
+
+  - method: GET
+    path: /posts/1
+    description: Returns a single post by ID
+    schemaFile: Schemas/GET/post-by-id.json
+
+  - method: POST
+    path: /posts
+    description: Creates a new post
+    schemaFile: Schemas/POST/create-post.json
+
+  - method: PUT
+    path: /posts/1
+    description: Updates a post
+    schemaFile: Schemas/PUT/update-post.json
+
+  - method: DELETE
+    path: /posts/1
+    description: Deletes a post
